@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rethink+Sans:ital,wght@0,400..800;1,400..800&display=swap');
 
 body {
     padding: 0;
@@ -17,6 +18,7 @@ h1 ,h2{
     position: absolute;
     width: 100%;
     z-index: 1;
+    top: 0;
 }
 
 .header .nav ul {
@@ -24,7 +26,7 @@ h1 ,h2{
 }
 
 .header .nav li {
-    margin-right: 10px;
+    margin-right: 20px;
     list-style-type: none;
     color: #505F98;
 }
@@ -94,6 +96,7 @@ h1 ,h2{
 
 .title h2 {
     color: #37447E;
+    transform: translateX(-75px);
 }
 
 .second-content {
@@ -255,4 +258,81 @@ h1 ,h2{
 }
 .section-text p {
     color: #6F7CB2;
+}
+
+.contact-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f6f8fa;
+    margin-top: 30px;
+    height: 700px;
+    overflow: hidden;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+.contact-main img {
+    width: 1000px;
+    height: 700px;
+    border-radius: 100px 0 0 100px;
+    transform: translateX(160px);
+    opacity: 0.8;
+}
+.contact-content form{
+    margin-left: 60px;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    line-height: 50px;
+    justify-content: center;
+}
+.contact-title h1{
+    text-align: center;
+    margin-top: 170px;
+    margin-bottom: 60px;
+    color: #505F98;
+}
+.contact-content input{
+    padding: 19px 20px;
+    width: 400px;
+    border-radius: 6px;
+    border: 1px solid black;
+}
+
+.contact-content label {
+    font-size: 18px;
+    font-weight: bolder;
+    margin-left: 20px;
+}
+.contact-content textarea{
+    resize: none;
+    width: 400px;
+    height: 130px;
+    border: 1px solid;
+    border-radius: 6px;
+    padding: 19px 20px;
+    font-family: rethink sans;
+}  
+.contact-content textarea::placeholder {
+    color: #CDD1D4;
+}
+
+.contact-content input::placeholder{
+    font-size: 12px;
+    font-family: rethink sans;
+    color: #CDD1D4;
+}
+.contact-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.contact-button button {
+    background-color: #091133;
+    color: white;
+    border: none;
+    padding: 10px 40px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
 }
