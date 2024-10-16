@@ -454,3 +454,24 @@ a{
     text-align: center;
     color: #505F98;
 }
+.error-section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.error-section img {
+    width: 700px;
+}
+.error-section h2 ,p{
+    color: #b4b7ba;
+    text-align: center;
+}
+.error-text {
+    transform: translateY(40px);
+    display: flex;
+    justify-content: center;
+}
+.error-text h1 {
+    color: #b4b7ba;
+}
