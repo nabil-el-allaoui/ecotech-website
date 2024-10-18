@@ -15,7 +15,9 @@ h1 ,h2{
 a{
     text-decoration: none;
 }
-
+hr {
+    width: 65%;
+}
 .header {
     display: flex;
     justify-content: space-between;
@@ -38,7 +40,7 @@ a{
 
 .button .buy {
     background-color: #111B47;
-    padding: 7px 50px;
+    padding: 7px 40px;
     border: none;
     border-radius: 2px;
     color: white;
@@ -198,7 +200,6 @@ a{
 
 .footer {
     background-color: #E7ECFF;
-    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -210,9 +211,9 @@ a{
 
 .copyright {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    width: 900px;
+    width: 100%;
 }
 
 .copyright p {
@@ -221,12 +222,12 @@ a{
 }
 
 .footer-nav {
-    margin-top: 50px;
-    width: 900px;
+    
+    width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    border-top: 1px solid #CDD1D4;
+    justify-content: space-around;
+    
 }
 
 .footer-nav ul{
@@ -632,4 +633,185 @@ second content will have same effect*/
 
 .toggle-input:checked ~ .dark-title p{
     color: white;
+}
+
+.mobile-nav {
+    position: absolute;
+    z-index: 7;
+    width: 300px;
+    height: 100vh;
+    background-color: #6F7CB2;
+    display: none;
+    transition: all 0.15s ease-in-out;
+}
+
+.mobile-nav ul {
+    list-style: none;
+}
+.mobile-nav li {
+    margin-top: 15px;
+    color: white;
+}
+.hamburger-menu img {
+    height: 20px;
+    position: absolute;
+    z-index: 8;
+    top: 25px;
+}
+.toggle-hamburger {
+    display: none;
+}
+.toggle-hamburger:checked ~ .mobile-nav{
+    display: block;
+}
+
+@media (max-width : 922px) {
+    .dark-button {
+        left: 350px;
+    }
+    .dark-title p {
+        left: 270px;
+    }
+    .header .nav ul li{
+        margin: 3px;
+    }
+    .image-container img {
+        height: 800px;
+        width: 700px;
+    }
+}
+
+@media (max-width: 874px) {
+    .image-container .content p {
+        width: 100%;
+        font-size: 15px;
+    }
+    .image-container .content h1{
+        width: 100%;
+        font-size: 30px;
+    }
+    .image-container img {
+        height: 650px;
+        width: 600px;
+        opacity: 0.8;
+    }
+    .image-container .content {
+        top: 35%;
+        left: 5%;
+    }
+    .dark-button {
+        left: 120px;
+        top: 55px;
+    }
+    .dark-title p {
+        left: 40px;
+        top: 40px;
+    }
+    .header .nav ul li{
+        margin: 2px;
+    }
+    .second-content {
+        flex-direction: column;
+    }
+    .second-content img {
+        position: relative;
+        opacity: 0.3;
+    }
+    .second-content .main-content {
+        position: absolute;
+        z-index: 1;
+        width: 600px;
+    }
+    .main-content p {
+        color: rgb(66, 6, 66);
+    }
+    .third-content .left-image {
+        position: relative;
+        opacity: 0.2;
+    }
+    .aside-content {
+        position: absolute;
+        width: 600px;
+        margin-top: 50px;
+    }
+}
+
+.image-aside img{
+    width: 100%;
+}
+
+@media (max-width: 361px) {
+    .header .nav ul {
+        display: none;
+    }
+    .second-content .main-content {
+        width: 300px;
+    }
+    .third-content .aside-content{
+        width: 300px;
+    }
+    .third-content .left-image img {
+        width: 300px;
+    }
+    .image-container .content {
+        width: 200px;
+        top: 19%;
+    }
+    .image-content {
+        width: 300px;
+    }
+
+    .header .title {
+        margin-right: 20%;
+    }
+    .header .button .buy{
+        height: 40px;
+        width: 50px;
+        font-size: 11px;
+    }
+    .header .button {
+        display: none;
+    }
+    .dark-button {
+        left: 330px;
+        top: 25px;
+    }
+    .dark-title p {
+        left: 250px;
+        top: 9px;
+    }
+
+    .image-container img {
+        height: 350px;
+        width: 300px;
+    }
+    .image-container .content h1{
+        font-size: 15px;
+    }
+    .image-container .content p {
+        font-size: 9px;
+    }
+    .image-container .purchase-button {
+        padding: 5px 2px;
+    }
+    .image-container .learn-button {
+        padding: 5px;
+    }
+    .titles-container {
+        grid-template-columns: 1fr;
+    }
+    .aside-content h1 {
+        text-align: center;
+    }
+    .aside-content {
+        z-index: 2;
+    }
+    .footer-nav {
+        flex-direction: column;
+    }
+}
+@media (min-width : 361px) {
+    .hamburger-menu img {
+        display: none;
+    }
 }
